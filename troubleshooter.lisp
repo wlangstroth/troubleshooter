@@ -29,7 +29,7 @@
     "Totally numb"
     "Take opiates"
     "Take Tylenol"
-    "Make others miserable"
+    "Take opiates, make others miserable"
     "Amputate"
     "You're fine, you just slept on it funny"
     "You're having a heart attack"))
@@ -50,7 +50,7 @@
 (defun show-choices (tree)
   (cond ((numberp (first (rest tree))) nil)
         (t (loop for item in (rest tree)
-              for i from 1 to 10
+              for i from 1 to (length (rest tree))
               do (format t
                          "~d. ~a~%"
                          i
